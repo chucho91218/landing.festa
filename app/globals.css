@@ -1,0 +1,90 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Festa Colors - Basados en tu logo */
+  --background: #FDFBF7;         /* Crema Premium */
+  --foreground: #121B4A;         /* Azul Marino Festa */
+  
+  --card: #FDFBF7;
+  --card-foreground: #121B4A;
+  
+  --popover: #FDFBF7;
+  --popover-foreground: #121B4A;
+  
+  --primary: #121B4A;            /* El azul es el color primario */
+  --primary-foreground: #FDFBF7;
+  
+  --secondary: #E5E1DA;          /* Un beige/gris suave para contrastes */
+  --secondary-foreground: #121B4A;
+  
+  --muted: #F3F0EB;
+  --muted-foreground: #5E6B8E;   /* Azul grisáceo para textos secundarios */
+  
+  --accent: #E5E1DA;
+  --accent-foreground: #121B4A;
+  
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.577 0.245 27.325);
+  
+  --border: #E5E1DA;             /* Bordes sutiles */
+  --input: #E5E1DA;
+  --ring: #121B4A;
+  
+  --radius: 0rem;                /* 0 para un diseño más recto y elegante */
+  
+  /* Sidebar con los mismos tonos */
+  --sidebar: #FDFBF7;
+  --sidebar-foreground: #121B4A;
+  --sidebar-primary: #121B4A;
+  --sidebar-primary-foreground: #FDFBF7;
+  --sidebar-accent: #E5E1DA;
+  --sidebar-accent-foreground: #121B4A;
+  --sidebar-border: #E5E1DA;
+  --sidebar-ring: #121B4A;
+}
+
+@theme inline {
+  /* Actualizamos las fuentes para que coincidan con tu layout */
+  --font-sans: var(--font-sans), 'Inter', 'sans-serif';
+  --font-serif: var(--font-serif), 'Playfair Display', 'serif';
+  
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  
+  /* Agregamos el espaciado ultra-ancho para el estilo del logo */
+  --letter-spacing-ultra: 0.3em;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+  /* Forzamos que los títulos usen la Serif del logo */
+  h1, h2, h3, h4, .font-serif {
+    @apply font-serif tracking-tight;
+  }
+}
