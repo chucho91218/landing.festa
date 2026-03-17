@@ -6,36 +6,36 @@ import { Check, ExternalLink } from 'lucide-react';
 const eventTypes = [
   { id: '15s', label: '15 AÑOS' },
   { id: 'bodas', label: 'BODAS' },
-  { id: 'cumpleaños', label: 'CUMPLEAÑOS' },
   { id: 'egresados', label: 'EGRESADOS' },
+  { id: 'cumpleaños', label: 'CUMPLEAÑOS' },
   { id: 'inauguracion', label: 'INAUGURACIÓN' },
-  { id: 'sacramentos', label: 'BAUTISMO/COMUNIÓN/CONFIRMACIÓN' },
+  { id: 'sacramentos', label: 'BAUTISMO/COMUNIÓN' },
 ];
 
 const packagesData: any = {
   '15s': [
-    { name: 'ESENCIAL', price: '$33.000', demoUrl: 'https://egres-clasic1-0.vercel.app/', features: ['Portada con foto', 'Cuenta regresiva', 'Ubicación Google Maps', 'Info de fecha/hora', 'Dress Code', 'Galería (4 fotos)'] },
+    { name: 'ESENCIAL', price: '$33.000', demoUrl: 'https://15-clasic1-0.vercel.app/', features: ['Portada con foto', 'Cuenta regresiva', 'Ubicación Google Maps', 'Info de fecha/hora', 'Dress Code', 'Galería (4 fotos)'] },
     { name: 'FULL', price: '$44.000', demoUrl: 'https://15-clasic2-0.vercel.app/', features: ['Todo lo del Esencial', 'Música personalizada', 'Galería (6 fotos)', 'CBU para regalos', 'Confirmación inteligente', 'Botón WhatsApp directo'], popular: true },
-    { name: 'FULL + QR', price: '$53.000', demoUrl: 'https://boda-clasic-3-0.vercel.app/', features: ['Todo lo del Full', 'Galería ilimitada', 'Trivia interactiva', 'QR Social'] },
+    { name: 'FULL + QR', price: '$53.000', demoUrl: 'https://15-clasic3-0.vercel.app/', features: ['Todo lo del Full', 'Galería (8 fotos)', 'QR Social (Subida de fotos)', 'Nuestra Historia (Hoja de Vida)'] },
   ],
   'bodas': [
-    { name: 'ESENCIAL', price: '$33.000', demoUrl: 'https://egres-clasic1-0.vercel.app/', features: ['Portada con foto', 'Cuenta regresiva', 'Ubicación Google Maps', 'Info de fecha/hora', 'Dress Code', 'Galería (4 fotos)'] },
-    { name: 'FULL', price: '$44.000', demoUrl: 'https://15-clasic2-0.vercel.app/', features: ['Todo lo del Esencial', 'Música personalizada', 'Galería (6 fotos)', 'CBU para regalos', 'Confirmación inteligente', 'Botón WhatsApp directo'], popular: true },
-    { name: 'FULL + QR', price: '$53.000', demoUrl: 'https://boda-clasic-3-0.vercel.app/', features: ['Todo lo del Full', 'Galería ilimitada', 'Trivia interactiva', 'QR Social'] },
-  ],
-  'cumpleaños': [
-    { name: 'PACK CUMPLEAÑOS', price: '$38.000', demoUrl: 'https://15-clasic2-0.vercel.app/', features: ['Portada con foto ', 'Cuenta Regresiva', 'Ubicación', 'Dress Code', 'Música de fondo', 'Confirmación a WhatsApp'], popular: true, single: true },
+    { name: 'ESENCIAL', price: '$33.000', demoUrl: 'https://boda-clasic-1-0.vercel.app/', features: ['Portada con foto', 'Cuenta regresiva', 'Ubicación Google Maps', 'Info de fecha/hora', 'Dress Code', 'Galería (4 fotos)'] },
+    { name: 'FULL', price: '$44.000', demoUrl: 'https://boda-clasic-2-0.vercel.app/', features: ['Todo lo del Esencial', 'Música personalizada', 'Galería (6 fotos)', 'CBU para regalos', 'Confirmación inteligente', 'Botón WhatsApp directo'], popular: true },
+    { name: 'FULL + QR', price: '$53.000', demoUrl: 'https://boda-clasic-3-0.vercel.app/', features: ['Todo lo del Full', 'Galería (8 fotos)', 'QR Social (Subida de fotos)', 'Nuestra Historia (Hoja de Vida)'] },
   ],
   'egresados': [
     { name: 'ESENCIAL', price: '$33.000', demoUrl: 'https://egres-clasic1-0.vercel.app/', features: ['Portada con foto', 'Cuenta regresiva', 'Ubicación Google Maps', 'Info de fecha/hora', 'Dress Code', 'Galería (4 fotos)'] },
-    { name: 'FULL', price: '$44.000', demoUrl: 'https://15-clasic2-0.vercel.app/', features: ['Todo lo del Esencial', 'Música personalizada', 'Galería (6 fotos)', 'CBU para regalos', 'Confirmación inteligente', 'Botón WhatsApp directo'], popular: true },
-    { name: 'FULL + QR', price: '$53.000', demoUrl: 'https://boda-clasic-3-0.vercel.app/', features: ['Todo lo del Full', 'Galería ilimitada', 'Trivia interactiva', 'QR Social'] },
+    { name: 'FULL', price: '$44.000', demoUrl: 'https://egres-clasic2-0.vercel.app/', features: ['Todo lo del Esencial', 'Música personalizada', 'Galería (6 fotos)', 'CBU para regalos', 'Confirmación inteligente', 'Botón WhatsApp directo'], popular: true },
+    { name: 'FULL + QR', price: '$53.000', demoUrl: 'https://egres-clasic3-0.vercel.app/', features: ['Todo lo del Full', 'Galería (8 fotos)', 'QR Social (Subida de fotos)', 'Nuestra Historia (Hoja de Vida)'] },
+  ],
+  'cumpleaños': [
+    { name: 'PACK CUMPLEAÑOS', price: '$38.000', demoUrl: '#', features: ['Portada con foto ', 'Cuenta Regresiva', 'Ubicación', 'Dress Code', 'Música de fondo', 'Confirmación a WhatsApp'], popular: true, single: true },
   ],
   'inauguracion': [
-    { name: 'PACK APERTURA', price: '$38.000', demoUrl: 'https://boda-clasic-3-0.vercel.app/', features: ['Portada de marca', 'Info de apertura', 'Ubicación Google Maps', 'Galería "El Proceso"', 'Redes Sociales', 'Música de fondo'], popular: true, single: true },
+    { name: 'PACK APERTURA', price: '$38.000', demoUrl: '#', features: ['Portada de marca', 'Info de apertura', 'Ubicación Google Maps', 'Galería "El Proceso"', 'Redes Sociales', 'Música de fondo'], popular: true, single: true },
   ],
   'sacramentos': [
-    { name: 'PACK SACRAMENTO', price: '$38.000', demoUrl: 'https://egres-clasic1-0.vercel.app/', features: ['Portada elegante', 'Doble ubicación', 'Info de Padrinos', 'Galería de vida', 'Música suave'], popular: true, single: true },
+    { name: 'PACK SACRAMENTO', price: '$38.000', demoUrl: '#', features: ['Portada elegante', 'Doble ubicación', 'Info de Padrinos', 'Galería de vida', 'Música suave'], popular: true, single: true },
   ]
 };
 
@@ -47,7 +47,7 @@ export const Packages = () => {
       <div className="max-w-7xl mx-auto text-center">
         
         <p className="text-[10px] uppercase tracking-[0.4em] text-primary/60 mb-4 font-bold">NUESTROS PAQUETES</p>
-        <h2 className="text-4xl md:text-5xl font-serif text-primary mb-12">Elegí tu evento</h2>
+        <h2 className="text-4xl md:text-5xl font-serif text-primary mb-12 italic">Elegí tu evento</h2>
 
         <div className="flex flex-wrap justify-center gap-3 mb-20">
           {eventTypes.map((type) => (
@@ -69,7 +69,7 @@ export const Packages = () => {
           {packagesData[activeTab].map((pkg: any, idx: number) => (
             <div 
               key={idx} 
-              className={`relative p-12 border border-primary/10 flex flex-col transition-all ${pkg.popular ? 'bg-primary text-background' : 'bg-white text-primary'}`}
+              className={`relative p-12 border border-primary/10 flex flex-col transition-all ${pkg.popular ? 'bg-primary text-background shadow-xl' : 'bg-white text-primary'}`}
             >
               {pkg.popular && (
                 <span className={`absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 text-[9px] font-bold tracking-widest uppercase ${pkg.popular && !pkg.single ? 'bg-white text-primary border border-primary/10' : 'bg-primary text-background'}`}>
@@ -77,7 +77,7 @@ export const Packages = () => {
                 </span>
               )}
 
-              <div className="mb-10">
+              <div className="mb-10 text-center">
                 <h3 className="text-[11px] font-bold tracking-[0.2em] mb-6 opacity-70 uppercase">{pkg.name}</h3>
                 <div className="flex items-center justify-center gap-1">
                   <span className="text-5xl font-serif">{pkg.price}</span>
@@ -96,16 +96,11 @@ export const Packages = () => {
                 ))}
               </ul>
 
-              {/* Advertencia de Demo */}
-              <p className="text-[9px] leading-tight opacity-50 mb-6 text-left italic">
-                * Las demos son modelos ilustrativos. Aunque el contenido pueda corresponder a otro evento, reflejan todas las características del paquete. Luego se personaliza 100% para tu celebración.
-              </p>
-
               <div className="space-y-3">
                 <button className={`w-full py-4 text-[10px] font-bold tracking-[0.2em] uppercase transition-all ${
-                  pkg.popular ? 'bg-white text-primary hover:bg-opacity-90' : 'bg-primary text-background hover:opacity-90'
+                  pkg.popular ? 'bg-white text-primary hover:bg-neutral-100' : 'bg-primary text-background hover:bg-primary/90'
                 }`}>
-                  ELEGIR PAQUETE
+                  PEDIR AHORA
                 </button>
                 <a 
                   href={pkg.demoUrl}
@@ -113,8 +108,8 @@ export const Packages = () => {
                   rel="noopener noreferrer"
                   className={`w-full py-4 text-[10px] font-bold tracking-[0.2em] uppercase flex items-center justify-center gap-2 border transition-all ${
                   pkg.popular ? 'border-white/20 hover:bg-white/10' : 'border-primary/10 hover:bg-primary/5'
-                }`}>
-                  VER DEMO <ExternalLink size={12} />
+                } ${pkg.demoUrl === '#' ? 'opacity-30 pointer-events-none' : ''}`}>
+                  {pkg.demoUrl === '#' ? 'PRÓXIMAMENTE' : 'VER DEMO'} <ExternalLink size={12} />
                 </a>
               </div>
             </div>
