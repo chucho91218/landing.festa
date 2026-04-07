@@ -21,7 +21,7 @@ const allFeatures = [
   "Música personalizada",
   "CBU para regalos",
   "Confirmación mediante Whatsapp",
-"Nuestra Historia (Hoja de Vida)",
+  "Nuestra Historia (Hoja de Vida)",
   "Confirmación mediante Excel",
   "QR Social (Subida de fotos)",
 ];
@@ -61,21 +61,33 @@ export const Packages = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedFeatures, setSelectedFeatures] = useState<string[]>([]);
 
+  const WHATSAPP_NUMBER = "543573690769";
+
+  // MENSAJE PARA PAQUETES FIJOS
+  const handleOrder = (pkgName: string) => {
+    const eventLabel = eventTypes.find(t => t.id === activeTab)?.label || "";
+    const message = encodeURIComponent(
+      `¡Hola Festa! 👋 Me interesa el paquete *${pkgName}* para *${eventLabel}*.\n\n¿Me podrías dar más información sobre cómo empezar?`
+    );
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`, '_blank');
+  };
+
+  // MENSAJE PARA PACK PERSONALIZABLE (MODAL)
+  const handleCustomWhatsApp = () => {
+    const eventLabel = eventTypes.find(t => t.id === activeTab)?.label || "";
+    const message = encodeURIComponent(
+      `¡Hola Festa! 👋 Me interesa el *Pack Personalizable Premium* ($60.000) para mi evento de *${eventLabel}*.\n\n` +
+      `*Módulos elegidos:*\n` + 
+      selectedFeatures.map(f => `- ${f}`).join('\n') +
+      `\n\n¿Cómo procedemos?`
+    );
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`, '_blank');
+  };
+
   const toggleFeature = (feature: string) => {
     setSelectedFeatures(prev => 
       prev.includes(feature) ? prev.filter(f => f !== feature) : [...prev, feature]
     );
-  };
-
-  const handleWhatsApp = () => {
-    const phone = "5493573690769"; 
-    const message = encodeURIComponent(
-      `¡Hola Festa! 👋 Me interesa el *Pack Personalizable Premium* ($60.000).\n\n` +
-      `*Módulos elegidos para mi invitación:*\n` + 
-      selectedFeatures.map(f => `- ${f}`).join('\n') +
-      `\n\nQuiero la confirmación centralizada en Excel. ¿Cómo procedemos?`
-    );
-    window.open(`https://wa.me/${phone}?text=${message}`, '_blank');
   };
 
   return (
@@ -103,14 +115,6 @@ export const Packages = () => {
                 </span>
               )}
 
-              {pkg.isCustom && (
-                <div className="absolute top-0 right-0 overflow-hidden w-20 h-20">
-                  <div className="absolute top-3 -right-8 bg-red-600 text-white text-[10px] font-bold py-1 px-10 rotate-45 shadow-sm">
-                    
-                  </div>
-                </div>
-              )}
-
               <h3 className="text-[11px] font-bold tracking-[0.2em] mb-6 opacity-70 uppercase">{pkg.name}</h3>
               <div className="flex items-center justify-center gap-1 mb-10">
                 <span className="text-5xl font-serif">{pkg.price}</span>
@@ -133,18 +137,17 @@ export const Packages = () => {
 
               <div className="mt-auto space-y-3">
                 <button 
-                  onClick={() => pkg.isCustom ? setIsModalOpen(true) : null}
+                  onClick={() => pkg.isCustom ? setIsModalOpen(true) : handleOrder(pkg.name)}
                   className={`w-full py-4 text-[10px] font-bold tracking-[0.2em] uppercase transition-all ${pkg.popular ? 'bg-white text-primary' : 'bg-primary text-background'}`}>
                   {pkg.isCustom ? 'PERSONALIZAR' : 'PEDIR AHORA'}
                 </button>
                 
-                {pkg.isCustom ? (
-                  <div className="h-[46px]" /> 
-                ) : (
+                {!pkg.isCustom && (
                   <a href={pkg.demoUrl} target="_blank" className={`w-full py-4 text-[10px] font-bold tracking-[0.2em] uppercase flex items-center justify-center gap-2 border ${pkg.popular ? 'border-white/20 hover:bg-white/10' : 'border-primary/10'} ${pkg.demoUrl === '#' ? 'opacity-30 pointer-events-none' : ''}`}>
                     {pkg.demoUrl === '#' ? 'PRÓXIMAMENTE' : 'VER DEMO'} <ExternalLink size={12} />
                    </a>
                 )}
+                {pkg.isCustom && <div className="h-[46px]" />}
               </div>
             </div>
           ))}
@@ -157,7 +160,6 @@ export const Packages = () => {
             <div className="p-8 border-b flex justify-between items-center bg-gray-50">
               <div>
                 <h2 className="text-2xl font-serif italic text-[#1a234e]">Configurá tu invitación</h2>
-                
               </div>
               <button onClick={() => setIsModalOpen(false)}><X size={24} className="text-gray-400 hover:text-[#1a234e] transition-colors" /></button>
             </div>
@@ -183,7 +185,7 @@ export const Packages = () => {
               </div>
               <button 
                 disabled={selectedFeatures.length === 0}
-                onClick={handleWhatsApp}
+                onClick={handleCustomWhatsApp}
                 className="bg-[#1a234e] text-white px-10 py-5 text-[10px] font-bold tracking-[0.2em] uppercase hover:bg-red-700 transition-all disabled:opacity-30 disabled:pointer-events-none shadow-lg"
               >
                 PEDIR POR WHATSAPP

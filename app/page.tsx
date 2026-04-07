@@ -9,10 +9,21 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       <Hero />
-      <Packages />
-      <Process />
-      <Addons />
-      <FAQ />
+      {/* El de paquetes ya debe tener el id="packages" adentro, pero por las dudas: */}
+      <Packages /> 
+      
+      <div id="process">
+        <Process />
+      </div>
+
+      <div id="addons">
+        <Addons />
+      </div>
+
+      <div id="faq">
+        <FAQ />
+      </div>
+
       <Footer />
     </main>
   );
