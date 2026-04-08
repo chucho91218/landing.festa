@@ -30,19 +30,19 @@ const packagesData: any = {
   '15s': [
     { name: 'ESENCIAL', price: '$34.000', demoUrl: 'https://15-clasic1-0.vercel.app/', features: ['Portada con foto', 'Cuenta regresiva', 'Ubicación Google Maps', 'Info de fecha/hora', 'Dress Code', 'Galería (4 fotos)'] },
     { name: 'FULL', price: '$46.000', demoUrl: 'https://15-clasic2-0.vercel.app/', features: ['Todo lo del Esencial', 'Música personalizada', 'Galería (6 fotos)', 'CBU para regalos', 'Confirmación inteligente', 'Botón WhatsApp directo'], popular: true },
-    { name: 'FULL + QR', price: '$55.000', demoUrl: 'https://15-clasic3-0.vercel.app/', features: ['Todo lo del Full', 'Galería (8 fotos)', 'QR Social (Subida de fotos)', 'Nuestra Historia (Hoja de Vida)'] },
+    { name: 'FULL + QR', price: '$55.000', demoUrl: 'https://15-clasic3-0.vercel.app/', features: ['Todo lo del Full', 'Galería ilimitada', 'QR Social (Subida de fotos)', 'Nuestra Historia (Hoja de Vida)'] },
     { name: 'PERSONALIZABLE', price: '$60.000', isCustom: true, features: ['Diseño 100% a medida: Vos definís cómo hacerla', 'Elegí y combiná todas nuestras secciones', 'CONFIRMACIÓN CENTRALIZADA EN EXCEL'] },
   ],
   'bodas': [
     { name: 'ESENCIAL', price: '$34.000', demoUrl: 'https://boda-clasic-1-0.vercel.app/', features: ['Portada con foto', 'Cuenta regresiva', 'Ubicación Google Maps', 'Info de fecha/hora', 'Dress Code', 'Galería (4 fotos)'] },
     { name: 'FULL', price: '$46.000', demoUrl: 'https://boda-clasic-2-0.vercel.app/', features: ['Todo lo del Esencial', 'Música personalizada', 'Galería (6 fotos)', 'CBU para regalos', 'Confirmación inteligente', 'Botón WhatsApp directo'], popular: true },
-    { name: 'FULL + QR', price: '$55.000', demoUrl: 'https://boda-clasic-3-0.vercel.app/', features: ['Todo lo del Full', 'Galería (8 fotos)', 'QR Social (Subida de fotos)', 'Nuestra Historia (Hoja de Vida)'] },
+    { name: 'FULL + QR', price: '$55.000', demoUrl: 'https://boda-clasic-3-0.vercel.app/', features: ['Todo lo del Full', 'Galería ilimitada', 'QR Social (Subida de fotos)', 'Nuestra Historia (Hoja de Vida)'] },
     { name: 'PERSONALIZABLE', price: '$60.000', isCustom: true, features: ['Diseño 100% a medida: Vos definís cómo hacerla', 'Elegí y combiná todas nuestras secciones', 'CONFIRMACIÓN CENTRALIZADA EN EXCEL'] },
   ],
   'egresados': [
     { name: 'ESENCIAL', price: '$34.000', demoUrl: 'https://egres-clasic1-0.vercel.app/', features: ['Portada con foto', 'Cuenta regresiva', 'Ubicación Google Maps', 'Info de fecha/hora', 'Dress Code', 'Galería (4 fotos)'] },
     { name: 'FULL', price: '$46.000', demoUrl: 'https://egres-clasic2-0.vercel.app/', features: ['Todo lo del Esencial', 'Música personalizada', 'Galería (6 fotos)', 'CBU para regalos', 'Confirmación inteligente', 'Botón WhatsApp directo'], popular: true },
-    { name: 'FULL + QR', price: '$55.000', demoUrl: 'https://egres-clasic3-0.vercel.app/', features: ['Todo lo del Full', 'Galería (8 fotos)', 'QR Social (Subida de fotos)', 'Nuestra Historia (Hoja de Vida)'] },
+    { name: 'FULL + QR', price: '$55.000', demoUrl: 'https://egres-clasic3-0.vercel.app/', features: ['Todo lo del Full', 'Galería ilimitada', 'QR Social (Subida de fotos)', 'Nuestra Historia (Hoja de Vida)'] },
     { name: 'PERSONALIZABLE', price: '$60.000', isCustom: true, features: ['Diseño 100% a medida: Vos definís cómo hacerla', 'Elegí y combiná todas nuestras secciones', 'CONFIRMACIÓN CENTRALIZADA EN EXCEL'] },
   ],
   'cumpleaños': [

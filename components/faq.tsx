@@ -1,12 +1,12 @@
 "use client";
 
 import React, { useState } from 'react';
-import { ChevronDown, CreditCard, Banknote } from 'lucide-react';
+import { ChevronDown, CreditCard, Banknote, Plus, Minus } from 'lucide-react';
 
 const faqs = [
   {
     question: "¿Cómo envío la invitación a mis invitados?",
-    answer: "Recibís un link único y personalizado que podés enviar por WhatsApp a todos tus contactos. Es tan simple como copiar y pegar un mensaje."
+    answer: "Recibís un link único y personalizado que podés enviar a todos tus contactos. Es tan simple como copiar y pegar un mensaje."
   },
   {
     question: "¿Debo abonar por cada invitación enviada?",
@@ -22,11 +22,11 @@ const faqs = [
   },
   {
     question: "¿La confirmación por Excel está disponible en todos los paquetes?",
-    answer: "No. El sistema de confirmación inteligente mediante Excel es exclusivo del Pack Personalizable. En los packs Esencial y Full, la confirmación llega directamente como un mensaje a tu WhatsApp."
+    answer: "No. El sistema de confirmación inteligente es exclusivo del Pack Personalizable. En los packs Esencial y Full, la confirmación llega directamente como un mensaje a tu WhatsApp."
   },
   {
     question: "¿Puedo ver quién confirmó su asistencia?",
-    answer: "¡Claro! Si elegís el sistema con Excel, vas a tener una lista organizada con nombres, menús especiales (celíacos, veganos, etc.) y mensajes de cada invitado."
+    answer: "¡Claro! Si elegís el sistema, vas a tener una lista organizada con nombres, menús especiales (celíacos, veganos, etc.) y mensajes de cada invitado."
   },
   {
     question: "¿Cuánto demora la entrega?",
@@ -42,19 +42,22 @@ const faqs = [
   },
   {
     question: "¿Cómo funciona el código QR?",
-    answer: "Este código redirige a tus invitados a un Canal o Grupo de Instagram exclusivo de tu fiesta, donde pueden interactuar en la previa, recibir información y subir sus propias fotos y videos el día del evento para compartirlos con todos en tiempo real."
+    answer: "Este código redirige a tus invitados a un Canal de Instagram exclusivo de tu fiesta, donde pueden interactuar en la previa, recibir información y subir sus propias fotos y videos el día del evento para compartirlos con todos en tiempo real."
   }
 ];
 
 export const FAQ = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [showAll, setShowAll] = useState(false);
+
+  const visibleFaqs = showAll ? faqs : faqs.slice(0, 4);
 
   return (
     <section id="faq" className="py-24 px-6 bg-[#e5e2da]">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
         
-        {/* COLUMNA IZQUIERDA: MÉTODOS DE PAGO */}
-        <div className="lg:sticky lg:top-32">
+        {/* COLUMNA IZQUIERDA: MÉTODOS DE PAGO (INMÓVIL) */}
+        <div>
           <p className="text-[10px] uppercase tracking-[0.4em] text-primary/60 mb-4 font-bold">FORMAS DE PAGO</p>
           <h2 className="text-4xl font-serif text-[#1a234e] mb-12 italic">Métodos aceptados</h2>
           
@@ -77,13 +80,13 @@ export const FAQ = () => {
           </div>
         </div>
 
-               {/* COLUMNA DERECHA: FAQ */}
+        {/* COLUMNA DERECHA: FAQ */}
         <div>
           <p className="text-[10px] uppercase tracking-[0.4em] text-primary/60 mb-4 font-bold">FAQ</p>
           <h2 className="text-4xl font-serif text-[#1a234e] mb-12 italic">Preguntas frecuentes</h2>
 
           <div className="space-y-4">
-            {faqs.map((faq, index) => (
+            {visibleFaqs.map((faq, index) => (
               <div
                 key={index}
                 className="bg-white/50 border border-white/20"
@@ -115,6 +118,34 @@ export const FAQ = () => {
                 </div>
               </div>
             ))}
+
+            {/* BOTÓN TOGGLE (VER MÁS / VER MENOS) */}
+            <button
+              onClick={() => {
+                setShowAll(!showAll);
+                if (showAll) {
+                  // Scrolleamos un poco hacia arriba para que el usuario no quede perdido
+                  document.getElementById('faq')?.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+              className="w-full py-6 flex items-center justify-center gap-3 border border-dashed border-[#1a234e]/20 hover:border-[#1a234e]/40 transition-all group"
+            >
+              {showAll ? (
+                <>
+                  <Minus size={14} className="text-[#1a234e]/60 group-hover:text-[#1a234e]" />
+                  <span className="text-[10px] font-bold tracking-[0.3em] uppercase text-[#1a234e]/60 group-hover:text-[#1a234e]">
+                    Ver menos preguntas
+                  </span>
+                </>
+              ) : (
+                <>
+                  <Plus size={14} className="text-[#1a234e]/60 group-hover:text-[#1a234e]" />
+                  <span className="text-[10px] font-bold tracking-[0.3em] uppercase text-[#1a234e]/60 group-hover:text-[#1a234e]">
+                    Ver más preguntas
+                  </span>
+                </>
+              )}
+            </button>
           </div>
         </div>
 
