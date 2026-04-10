@@ -46,7 +46,7 @@ const packagesData: any = {
     { name: 'PERSONALIZABLE', price: '$60.000', isCustom: true, features: ['Diseño 100% a medida: Vos definís cómo hacerla', 'Elegí y combiná todas nuestras secciones', 'CONFIRMACIÓN CENTRALIZADA EN EXCEL'] },
   ],
   'cumpleaños': [
-    { name: 'PACK CUMPLEAÑOS', price: '$39.000', demoUrl: '#', features: ['Portada con foto ', 'Cuenta Regresiva', 'Ubicación', 'Dress Code', 'Música de fondo', 'Confirmación a WhatsApp'], popular: true, single: true },
+    { name: 'PACK CUMPLEAÑOS', price: '$39.000', demoUrl: 'https://cumplevalentino.festainvitaciones.com.ar/', features: ['Portada con foto ', 'Cuenta Regresiva', 'Ubicación', 'Dress Code', 'Música de fondo', 'Confirmación a WhatsApp'], popular: true, single: true },
   ],
   'inauguracion': [
     { name: 'PACK APERTURA', price: '$39.000', demoUrl: 'https://demo-inau.vercel.app/', features: ['Portada de marca', 'Info de apertura', 'Ubicación Google Maps', 'Galería "El Proceso"', 'Redes Sociales', 'Música de fondo'], popular: true, single: true },
