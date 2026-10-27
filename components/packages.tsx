@@ -28,31 +28,31 @@ const allFeatures = [
 
 const packagesData: any = {
   '15s': [
-    { name: 'ESENCIAL', price: '$36.000', demoUrl: 'https://15-clasic1-0.vercel.app/', features: ['Portada con foto', 'Cuenta regresiva', 'Ubicación Google Maps', 'Info de fecha/hora', 'Dress Code', 'Galería (4 fotos)'] },
-    { name: 'FULL', price: '$48.000', demoUrl: 'https://15-clasic2-0.vercel.app/', features: ['Todo lo del Esencial', 'Música personalizada', 'Galería (6 fotos)', 'CBU para regalos', 'Confirmación inteligente', 'Botón WhatsApp directo'], popular: true },
-    { name: 'FULL + QR', price: '$57.000', demoUrl: 'https://15-clasic3-0.vercel.app/', features: ['Todo lo del Full', 'Galería ilimitada', 'QR Social (Subida de fotos)', 'Nuestra Historia (Hoja de Vida)'] },
-    { name: 'PERSONALIZABLE', price: '$62.000', isCustom: true, features: ['Diseño 100% a medida: Vos definís cómo hacerla', 'Elegí y combiná todas nuestras secciones', 'CONFIRMACIÓN CENTRALIZADA EN EXCEL'] },
+    { name: 'ESENCIAL', price: '$40.000', demoUrl: 'https://15-clasic1-0.vercel.app/', features: ['Portada con foto', 'Cuenta regresiva', 'Ubicación Google Maps', 'Info de fecha/hora', 'Dress Code', 'Galería (4 fotos)'] },
+    { name: 'FULL', price: '$52.000', demoUrl: 'https://15-clasic2-0.vercel.app/', features: ['Todo lo del Esencial', 'Música personalizada', 'Galería (6 fotos)', 'CBU para regalos', 'Confirmación inteligente', 'Botón WhatsApp directo'], popular: true },
+    { name: 'FULL + QR', price: '$61.000', demoUrl: 'https://15-clasic3-0.vercel.app/', features: ['Todo lo del Full', 'Galería ilimitada', 'QR Social (Subida de fotos)', 'Nuestra Historia (Hoja de Vida)'] },
+    { name: 'PERSONALIZABLE', price: '$66.000', isCustom: true, features: ['Diseño 100% a medida: Vos definís cómo hacerla', 'Elegí y combiná todas nuestras secciones', 'CONFIRMACIÓN CENTRALIZADA EN EXCEL'] },
   ],
   'bodas': [
-    { name: 'ESENCIAL', price: '$36.000', demoUrl: 'https://boda-clasic-1-0.vercel.app/', features: ['Portada con foto', 'Cuenta regresiva', 'Ubicación Google Maps', 'Info de fecha/hora', 'Dress Code', 'Galería (4 fotos)'] },
-    { name: 'FULL', price: '$48.000', demoUrl: 'https://boda-clasic-2-0.vercel.app/', features: ['Todo lo del Esencial', 'Música personalizada', 'Galería (6 fotos)', 'CBU para regalos', 'Confirmación inteligente', 'Botón WhatsApp directo'], popular: true },
-    { name: 'FULL + QR', price: '$57.000', demoUrl: 'https://boda-clasic-3-0.vercel.app/', features: ['Todo lo del Full', 'Galería ilimitada', 'QR Social (Subida de fotos)', 'Nuestra Historia (Hoja de Vida)'] },
-    { name: 'PERSONALIZABLE', price: '$62.000', isCustom: true, features: ['Diseño 100% a medida: Vos definís cómo hacerla', 'Elegí y combiná todas nuestras secciones', 'CONFIRMACIÓN CENTRALIZADA EN EXCEL'] },
+    { name: 'ESENCIAL', price: '$40.000', demoUrl: 'https://boda-clasic-1-0.vercel.app/', features: ['Portada con foto', 'Cuenta regresiva', 'Ubicación Google Maps', 'Info de fecha/hora', 'Dress Code', 'Galería (4 fotos)'] },
+    { name: 'FULL', price: '$52.000', demoUrl: 'https://boda-clasic-2-0.vercel.app/', features: ['Todo lo del Esencial', 'Música personalizada', 'Galería (6 fotos)', 'CBU para regalos', 'Confirmación inteligente', 'Botón WhatsApp directo'], popular: true },
+    { name: 'FULL + QR', price: '$61.000', demoUrl: 'https://boda-clasic-3-0.vercel.app/', features: ['Todo lo del Full', 'Galería ilimitada', 'QR Social (Subida de fotos)', 'Nuestra Historia (Hoja de Vida)'] },
+    { name: 'PERSONALIZABLE', price: '$66.000', isCustom: true, features: ['Diseño 100% a medida: Vos definís cómo hacerla', 'Elegí y combiná todas nuestras secciones', 'CONFIRMACIÓN CENTRALIZADA EN EXCEL'] },
   ],
   'egresados': [
-    { name: 'ESENCIAL', price: '$36.000', demoUrl: 'https://egres-clasic1-0.vercel.app/', features: ['Portada con foto', 'Cuenta regresiva', 'Ubicación Google Maps', 'Info de fecha/hora', 'Dress Code', 'Galería (4 fotos)'] },
-    { name: 'FULL', price: '$48.000', demoUrl: 'https://egres-clasic2-0.vercel.app/', features: ['Todo lo del Esencial', 'Música personalizada', 'Galería (6 fotos)', 'CBU para regalos', 'Confirmación inteligente', 'Botón WhatsApp directo'], popular: true },
-    { name: 'FULL + QR', price: '$57.000', demoUrl: 'https://egres-clasic3-0.vercel.app/', features: ['Todo lo del Full', 'Galería ilimitada', 'QR Social (Subida de fotos)', 'Nuestra Historia (Hoja de Vida)'] },
-    { name: 'PERSONALIZABLE', price: '$62.000', isCustom: true, features: ['Diseño 100% a medida: Vos definís cómo hacerla', 'Elegí y combiná todas nuestras secciones', 'CONFIRMACIÓN CENTRALIZADA EN EXCEL'] },
+    { name: 'ESENCIAL', price: '$40.000', demoUrl: 'https://egres-clasic1-0.vercel.app/', features: ['Portada con foto', 'Cuenta regresiva', 'Ubicación Google Maps', 'Info de fecha/hora', 'Dress Code', 'Galería (4 fotos)'] },
+    { name: 'FULL', price: '$52.000', demoUrl: 'https://egres-clasic2-0.vercel.app/', features: ['Todo lo del Esencial', 'Música personalizada', 'Galería (6 fotos)', 'CBU para regalos', 'Confirmación inteligente', 'Botón WhatsApp directo'], popular: true },
+    { name: 'FULL + QR', price: '$61.000', demoUrl: 'https://egres-clasic3-0.vercel.app/', features: ['Todo lo del Full', 'Galería ilimitada', 'QR Social (Subida de fotos)', 'Nuestra Historia (Hoja de Vida)'] },
+    { name: 'PERSONALIZABLE', price: '$66.000', isCustom: true, features: ['Diseño 100% a medida: Vos definís cómo hacerla', 'Elegí y combiná todas nuestras secciones', 'CONFIRMACIÓN CENTRALIZADA EN EXCEL'] },
   ],
   'cumpleaños': [
-    { name: 'PACK CUMPLEAÑOS', price: '$41.000', demoUrl: 'https://cumplevalentino.festainvitaciones.com.ar/', features: ['Portada con foto ', 'Cuenta Regresiva', 'Ubicación', 'Dress Code', 'Música de fondo', 'Confirmación a WhatsApp'], popular: true, single: true },
+    { name: 'PACK CUMPLEAÑOS', price: '$47.000', demoUrl: 'https://cumplevalentino.festainvitaciones.com.ar/', features: ['Portada con foto ', 'Cuenta Regresiva', 'Ubicación', 'Dress Code', 'Música de fondo', 'Confirmación a WhatsApp'], popular: true, single: true },
   ],
   'inauguracion': [
-    { name: 'PACK APERTURA', price: '$41.000', demoUrl: 'https://demo-inau.vercel.app/', features: ['Portada de marca', 'Info de apertura', 'Ubicación Google Maps', 'Galería "El Proceso"', 'Redes Sociales', 'Música de fondo'], popular: true, single: true },
+    { name: 'PACK APERTURA', price: '$47.000', demoUrl: 'https://demo-inau.vercel.app/', features: ['Portada de marca', 'Info de apertura', 'Ubicación Google Maps', 'Galería "El Proceso"', 'Redes Sociales', 'Música de fondo'], popular: true, single: true },
   ],
   'sacramentos': [
-    { name: 'PACK SACRAMENTO', price: '$41.000', demoUrl: 'https://demobautismo.pages.dev/', features: ['Portada elegante', 'Doble ubicación', 'Info de Padrinos', 'Galería de vida', 'Música suave'], popular: true, single: true },
+    { name: 'PACK SACRAMENTO', price: '$47.000', demoUrl: 'https://demobautismo.pages.dev/', features: ['Portada elegante', 'Doble ubicación', 'Info de Padrinos', 'Galería de vida', 'Música suave'], popular: true, single: true },
   ]
 };
 
